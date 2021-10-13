@@ -2,7 +2,6 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using OpenQA.Selenium.Support.UI;
 using System.Threading;
 
 
@@ -168,9 +167,6 @@ namespace NathanEgbertFinal
 
             IWebElement GlobalFeed = driver.FindElement(By.LinkText("Global Feed"));
             GlobalFeed.Click();
-
-            //TODO: Fix this with a better wait
-            Thread.Sleep(TimeSpan.FromSeconds(2));
 
             //TODO: reusable code, refactor later
             var feedArticles = driver.FindElements(By.CssSelector("div[class='article-preview']"));
